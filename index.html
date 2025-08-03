@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPVT | TVET Madani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* existing styles remain unchanged */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fbfe;
+      color: #333;
+    }
+    .background-section {
+      background: url('image TVET.jpg');
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+    header {
+      background: linear-gradient(to right, #bfa13c, #e6c200);
+      color: rgb(50, 171, 13);
+      padding: 80px 40px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      max-width: 190px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+      border-bottom: 3px solid white;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cce6ff;
+      font-style: italic;
+    }
+    nav {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    nav a {
+      background-color: #52ab98;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #3c8b80;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #2a5298;
+      margin-bottom: 15px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+      word-break: break-word;
+    }
+    .dashboard {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .dashboard-card {
+      background: white;
+      border: 2px solid #2a5298;
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .dashboard-card img {
+      width: 50px;
+      height: 50px;
+    }
+    .dashboard-info h3 {
+      font-size: 1.2rem;
+      color: #2a5298;
+      margin-bottom: 5px;
+    }
+    .dashboard-info p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    footer {
+      background: #d3d3d3;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .top-buttons {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+    .top-buttons button {
+      background-color: #52ab98;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .top-buttons button:hover {
+      background-color: #3c8b80;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        padding: 10px 20px;
+      }
+      .top-buttons {
+        top: 10px;
+        right: 10px;
+        flex-direction: column;
+      }
+      .top-buttons button {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-buttons">
+    <button onclick="netlifyIdentity.open('login')">Log Masuk</button>
+  </div>
+
+  <header>
+    <img src="Logo UPTVET.png" alt="TVET Logo" class="logo" />
+    <h1>UPVT</h1>
+    <p>Unit Pendidikan Vokasional dan Teknikal</p>
+    <nav>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="berita.html">Berita</a>
+      <a href="kursus.html">Kursus</a>
+      <a href="mohon.html">Mohon Sekarang</a>
+      <a href="#hubungi">Hubungi</a>
+    </nav>
+  </header>
+
+  <section class="background-section">
+    <div class="overlay">
+      <h2>Selamat Datang ke <strong>UPVT</strong></h2>
+      <p>Platform rasmi untuk pendidikan teknikal dan vokasional berteraskan nilai murni, inovasi dan kemahiran.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align:center;">Dashboard</h2>
+    <div class="dashboard">
+      <div class="dashboard-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Visitor Icon">
+        <div class="dashboard-info">
+          <h3>Pengunjung</h3>
+          <p>1,234</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hubungi">
+    <h2 style="text-align:center;">Hubungi Kami</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Email</h3>
+        <p>kemahiranbeliatvet@gmail.com (MAIL)</p>
+        <p>alyafbptsr@gmail.com (FACEBOOK)</p>
+      </div>
+      <div class="card">
+        <h3>Telefon</h3>
+        <p>+60 13-491 4891 (Puan Akma)</p>
+        <p>+60 18-945 8622 (Puan Mira)</p>
+      </div>
+      <div class="card">
+        <h3>Alamat</h3>
+        <p>No.22, 1st Floor, Jalan S2 G2 Garden Avenue, Seremban 2, 70300, Negeri Sembilan</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Unit Pendidikan Vokasional dan Teknologi | All rights reserved.
+  </footer>
+
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

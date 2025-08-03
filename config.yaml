@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "homepage"       # no slashes or symbols!
+    label: "Homepage"
+    files:
+      - label: "Homepage Content"
+        name: "homepage"    # alphanumeric only
+        file: "content/homepage.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
