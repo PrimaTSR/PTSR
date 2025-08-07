@@ -1,18 +1,16 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # or master
 
-
-publish_mode: simple
-media_folder: "images/uploads"      # Where uploaded files are stored
-public_folder: "/images/uploads"    # URL path to uploaded files
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "homepage"
-    label: "Homepage Content"
-    folder: "content/homepage"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "index.html"
+        fields:
+          - { label: "Welcome Text", name: "heroText", widget: "string" }

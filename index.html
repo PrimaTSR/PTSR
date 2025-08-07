@@ -7,67 +7,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
-    /* existing styles remain unchanged */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: #f9fbfe;
       color: #333;
     }
-    .background-section {
-      background: url('image TVET.jpg');
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 40px;
-      border-radius: 12px;
-      max-width: 800px;
-    }
+
     header {
       background: linear-gradient(to right, #bfa13c, #e6c200);
-      color: rgb(50, 171, 13);
+      color: white;
       padding: 80px 40px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .logo {
       max-width: 190px;
-      height: auto;
       margin-bottom: 20px;
     }
+
     header h1 {
       font-size: 3.5rem;
       font-weight: 700;
-      color: white;
-      letter-spacing: 4px;
-      text-transform: uppercase;
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
       border-bottom: 3px solid white;
       padding-bottom: 10px;
       margin-bottom: 20px;
+      text-transform: uppercase;
     }
+
     header p {
       font-size: 1.2rem;
-      color: #cce6ff;
       font-style: italic;
+      color: #cce6ff;
     }
+
     nav {
       margin-top: 30px;
       display: flex;
@@ -75,6 +61,7 @@
       flex-wrap: wrap;
       gap: 20px;
     }
+
     nav a {
       background-color: #52ab98;
       color: white;
@@ -84,20 +71,44 @@
       font-weight: 600;
       transition: 0.3s;
     }
+
     nav a:hover {
       background-color: #3c8b80;
     }
+
+    .background-section {
+      background: url('image TVET.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+
     .section {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
+
     .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
     }
+
     .card {
       background: white;
       border-radius: 12px;
@@ -107,24 +118,29 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
     }
+
     .card h3 {
       color: #2a5298;
       margin-bottom: 15px;
     }
+
     .card p {
       font-size: 0.95rem;
       color: #555;
       word-break: break-word;
     }
+
     .dashboard {
       display: flex;
       justify-content: center;
       gap: 30px;
       margin-bottom: 40px;
     }
+
     .dashboard-card {
       background: white;
       border: 2px solid #2a5298;
@@ -135,20 +151,24 @@
       align-items: center;
       gap: 20px;
     }
+
     .dashboard-card img {
       width: 50px;
       height: 50px;
     }
+
     .dashboard-info h3 {
       font-size: 1.2rem;
       color: #2a5298;
       margin-bottom: 5px;
     }
+
     .dashboard-info p {
       font-size: 1.5rem;
       font-weight: bold;
       color: #333;
     }
+
     footer {
       background: #d3d3d3;
       text-align: center;
@@ -156,57 +176,28 @@
       font-size: 0.9em;
       color: #777;
     }
-    .top-buttons {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
-    .top-buttons button {
-      background-color: #52ab98;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      margin-left: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
-    .top-buttons button:hover {
-      background-color: #3c8b80;
-    }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 2.2rem;
       }
+
       .cards {
         flex-direction: column;
         align-items: center;
       }
+
       nav a {
         padding: 10px 20px;
-      }
-      .top-buttons {
-        top: 10px;
-        right: 10px;
-        flex-direction: column;
-      }
-      .top-buttons button {
-        margin: 5px 0;
       }
     }
   </style>
 </head>
 <body>
-  <div class="top-buttons">
-    <button onclick="netlifyIdentity.open('login')">Log Masuk</button>
-  </div>
 
   <header>
     <img src="Logo UPTVET.png" alt="TVET Logo" class="logo" />
-    <h1>UPVT</h1>
+    <h1>UPVT | TVET Madani</h1>
     <p>Unit Pendidikan Vokasional dan Teknikal</p>
     <nav>
       <a href="tentang-kami.html">Tentang Kami</a>
@@ -243,7 +234,7 @@
       <div class="card">
         <h3>Email</h3>
         <p>kemahiranbeliatvet@gmail.com (MAIL)</p>
-        <p>alyafbptsr@gmail.com (FACEBOOK)</p>
+        <p>kemahiran belia TVET (FACEBOOK)</p>
       </div>
       <div class="card">
         <h3>Telefon</h3>
@@ -258,7 +249,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Unit Pendidikan Vokasional dan Teknologi | All rights reserved.
+    &copy; 2025 Unit Pendidikan Vokasional dan Teknikal | All rights reserved.
   </footer>
 
   <script>
